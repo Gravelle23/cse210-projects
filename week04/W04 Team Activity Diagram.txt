@@ -1,0 +1,179 @@
+Online Ordering Program
+
+Classes:
+Product
+
+Customer
+
+Address
+
+Order
+
+Class Attributes:
+Product Class:
+
+name - The name of the product.
+
+productid - The ID of the product.
+
+price - The price of the product.
+
+quantity - The quantity of the product.
+
+Customer Class:
+
+name - The name of the customer.
+
+address - The address of the customer (this is an instance of the Address class).
+
+Address Class:
+
+street - The street of the address.
+
+city - The city of the address.
+
+state - The state of the address.
+
+country - The country of the address.
+
+Order Class:
+
+products - A list of products in the order.
+
+customer - The customer making the order (instance of the Customer class).
+
+3. Class Behaviors (Methods):
+Product Class:
+
+GetTotalCost() - Calculate the total cost of the product (price * quantity).
+
+Customer Class:
+
+IsInUSA() - Determines whether the customer's address is in the USA.
+
+Address Class:
+
+IsInUSA() - Determines if the address is in the USA based on the country field.
+
+GetFullAddress() - Returns the full address as a formatted string.
+
+Order Class:
+
+AddProduct() - Adds a product to the order.
+
+GetTotalPrice() - Calculates the total price of the order including product costs and shipping.
+
+GetPackingLabel() - Returns a packing label (listing product name and ID).
+
+GetShippingLabel() - Returns a shipping label (listing the customer name and full address).
+
+
+ +------------------------+
+|        Product         |
++------------------------+
+| - name: string         |
+| - productId: int       |
+| - price: double        |
+| - quantity: int        |
++------------------------+
+| + GetTotalCost(): double|
++------------------------+
+          |
+          v
++------------------------+
+|        Customer        |
++------------------------+
+| - name: string         |
+| - address: Address     |
++------------------------+
+| + IsInUSA(): bool      |
++------------------------+
+          |
+          v
++------------------------+
+|        Address          |
++------------------------+
+| - street: string       |
+| - city: string         |
+| - state: string        |
+| - country: string      |
++------------------------+
+| + IsInUSA(): bool      |
+| + GetFullAddress(): string |
++------------------------+
+          |
+          v
++------------------------+
+|         Order          |
++------------------------+
+| - products: List<Product> |
+| - customer: Customer   |
++------------------------+
+| + AddProduct()         |
+| + GetTotalPrice(): double |
+| + GetPackingLabel(): string |
+| + GetShippingLabel(): string |
++------------------------+
+
+
+
+YouTube Videos Program
+
+Classes:
+Comment
+
+Video
+
+Class Attributes:
+Comment Class:
+
+name - The name of the person commenting.
+
+text - The text content of the comment.
+
+Video Class:
+
+title - The title of the video.
+
+author - The author of the video.
+
+lengthInSeconds - The length of the video in seconds.
+
+comments - A list of comments made on the video (instances of the Comment class).
+
+Class Behaviors:
+Comment Class:
+
+ToString() - Converts the Comment object to a string showing the name of the person and the comment text.
+
+Video Class:
+
+GetNumberOfComments() - Returns the number of comments on the video.
+
+AddComment() - Adds a comment to the video.
+
+DisplayVideoInfo() - Displays the title, author, length, and the comments associated with the video.
+
++-----------------------+
+|       Comment         |
++-----------------------+
+| - name: string        |
+| - text: string        |
++-----------------------+
+| + ToString(): string  |
++-----------------------+
+          |
+          v
++-----------------------+
+|        Video          |
++-----------------------+
+| - title: string       |
+| - author: string      |
+| - lengthInSeconds: int|
+| - comments: List<Comment> |
++-----------------------+
+| + GetNumberOfComments(): int |
+| + AddComment(comment: Comment) |
+| + DisplayVideoInfo()  |
++-----------------------+
+
