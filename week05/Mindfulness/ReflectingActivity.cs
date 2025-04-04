@@ -14,7 +14,7 @@ public class ReflectingActivity
     {
         _name = "Reflecting";
         _description = "This activity helps you reflect on personal prompts.";
-        _duration = 60; // Example duration in seconds
+        _duration = 60; 
         _prompts = new List<string> { "What are you grateful for?", "What can you improve?" };
         _questions = new List<string> { "Why is this important?", "What can you do to change?" };
     }
