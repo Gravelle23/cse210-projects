@@ -1,48 +1,22 @@
-using System.Runtime.CompilerServices;
-using System.Threading;
-public class BreathingActivity 
+using System;
+
+public class BreathingActivity : Activity
 {
-    private string _name;
-    private string _description;
-    private string _endDescription;
-    private int _duration;
-    public BreathingActivity()
-    {
-        _name = "Breathing";
-        _description = "This activity will help you relax by breathing deeply.";
-        _endDescription = "Thank you for taking the time to do this Activity!";
-        _duration = 60;
-    }
+    public BreathingActivity() : base("Breathing", "This activity will help you relax by walking you through breathing in and out slowly.") {}
 
-    public void DisplayStartingMessage()
+    public override void Run()
     {
-        Console.WriteLine($"Starting {_name}: {_description}");
-    }
+        Start();
 
-    public void DisplayEndingMessage()
-    {
-        Console.WriteLine($"Ending {_name}: {_endDescription}");
-    }
-
-    public void ShowSpinner(int seconds)
-    {
-        Console.WriteLine("Please wait...");
-    }
-
-    public void ShowCountDown(int seconds)
-    {
-        for (int i = seconds; i > 0; i--)
+        DateTime endTime = DateTime.Now.AddSeconds(_duration);
+        while (DateTime.Now < endTime)
         {
-            Console.WriteLine($"Time remaining: {i} seconds");
-            System.Threading.Thread.Sleep(1000);
+            Console.WriteLine("Breathe in...");
+            ShowSpinner(2);  // Pause for 2 seconds with animation
+            Console.WriteLine("Breathe out...");
+            ShowSpinner(2);  // Pause for 2 seconds with animation
         }
-    }
 
-    public void Run()
-    {
-        DisplayStartingMessage();
-        ShowSpinner(5);
-        ShowCountDown(_duration);
-        DisplayEndingMessage();
+        End();
     }
 }
