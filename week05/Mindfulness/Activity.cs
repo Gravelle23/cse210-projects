@@ -62,7 +62,6 @@ public abstract class Activity
         {
             Console.Write(spinner[spinnerIndex]);
             Thread.Sleep(1000);
-            // Thread.Sleep(_duration/3);
             Console.Write("\b \b");  // Erase previous spinner character
             spinnerIndex = (spinnerIndex + 1) % spinner.Length;
         }
