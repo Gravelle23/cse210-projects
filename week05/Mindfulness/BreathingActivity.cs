@@ -12,9 +12,9 @@ public class BreathingActivity : Activity
         while (DateTime.Now < endTime)
         {
             Console.WriteLine("Breathe in...");
-            ShowSpinner(2);  // Pause for 2 seconds with animation
+            ShowSpinner(3);  // Pause for 2 seconds with animation
             Console.WriteLine("Breathe out...");
-            ShowSpinner(2);  // Pause for 2 seconds with animation
+            ShowSpinner(4);  // Pause for 2 seconds with animation
         }
 
         End();
